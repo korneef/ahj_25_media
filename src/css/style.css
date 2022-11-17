@@ -1,0 +1,220 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #707070;
+    background-color: #1c1c1c;
+    padding: 5px 0;
+
+}
+
+.messenger-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-height: 900px;
+}
+
+/* Стили списка пользователей */
+
+.messenger-users {
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    border-color: #535353;
+    padding: 15px 8px;
+    background-color: #221a1a;
+    margin-right: 10px;
+    overflow: auto;
+
+}
+
+.messenger-users__user {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.messenger-users__user:last-child {
+    margin-bottom: 0px;
+}
+
+.messenger-users__user-image {
+    display: inline-block;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-image: url('../png/user.png');
+    background-size: cover;
+    margin-right: 10px;
+}
+
+/* Стили мессенджера */
+
+/* Сообщения */
+
+.messenger {
+    width: 600px;
+    border-radius: 5px;
+    border: 1px solid #21062d;
+    border-radius: 5px;
+    border-color: #535353;
+    background-color: #221a1a;
+    padding: 15px;
+}
+
+.messenger__messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+    padding: 15px;
+    height: 600px;
+}
+
+.messenger__messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.messenger__messages::-webkit-scrollbar-thumb {
+    background: linear-gradient(0, #41004f, #532248);
+    border-radius: 3px;
+}
+
+.messenger__message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 60%;
+    color: #c8c8c8;
+    word-wrap: break-word;
+}
+
+.messenger__your-message {
+    align-self: flex-end;
+    background: linear-gradient(210deg, #27002f, #532248);
+}
+
+.messenger__other-message {
+    background: linear-gradient(30deg, #27002f, #532248);
+}
+
+.messenger__message-author {
+    margin-bottom: 10px;
+}
+
+/* Форма отправки сообщений */
+
+.messenger__new-message-form {
+    padding-top: 15px;
+    background-color: inherit;
+}
+
+.messenger__new-message-textarea {
+    width: calc(100% - 30px);
+    height: 100px;
+    resize: none;
+    background: linear-gradient(200deg, #41004f, #220c1d);
+    color: #c8c8c8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.messenger__new-message-textarea:focus {
+    outline: none;
+}
+
+/* Форма авторизации */
+
+.authorization-form {
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 125px);
+    width: 250px;
+    background-color: #220c1d;
+    border: 1px solid #535353;
+    border-radius: 5px;
+}
+
+.authorization-form__textarea {
+    display: block;
+    margin: 15px auto;
+    background: linear-gradient(30deg, #27002f, #532248);
+    border: 1px solid #535353;
+    border-radius: 5px;
+    text-align: center;
+    color: #c8c8c8;
+    height: 40px;
+}
+
+.authorization-form__textarea:focus {
+    outline: none;
+}
+
+.authorization-form__textarea::placeholder {
+    color: #c8c8c8;
+}
+
+.autorization-form__button {
+    display: block;
+    margin: 15px auto;
+    padding: 0 15px;
+    background: linear-gradient(30deg, #27002f, #532248);
+    height: 40px;
+    border: 1px solid #535353;
+    border-radius: 20px;
+    color: #c1c1c1;
+}
+
+.autorization-form__button:hover {
+    cursor: pointer;
+    background: linear-gradient(30deg, #3f004c, #6e2d60);
+}
+
+.invisible {
+    display: none;
+}
+
+/* исчезновение placeholder */
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
