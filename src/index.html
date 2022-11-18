@@ -5,27 +5,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Geolocation, Notification, Media</title>
 </head>
 
 <body>
-  <div class="messenger-wrapper invisible">
-    <div class="messenger-users">
-    </div>
+  <div class="messenger-wrapper">
     <div class="messenger">
       <div class="messenger__messages">
-
       </div>
       <form action="" class="messenger__new-message-form">
-        <textarea class="messenger__new-message-textarea"></textarea>
-        <button class="messenger__new-message-button">Отправить</button>
+        <textarea class="messenger__new-message-textarea" required></textarea>
+        <button class="messenger__button messenger__new-message-button">Отправить</button>
       </form>
     </div>
   </div>
-  <form action="" class="authorization-form">
-    <input type="text" name="" id="" class="authorization-form__textarea" required placeholder="Введите ваше имя">
-    <button class="autorization-form__button" type="submit">Отправить</button>
-  </form>
+  <div class="geo-fail-wrapper invisible">
+    <form action="" class="geo-fail">
+      <h2 class="geo-fail__header">Что то пошло не так</h2>
+      <div class="geo-fail__description">
+        К сожалению нам не удалось определить ваше местоположение. Пожалуйста, дайте разрешене на использование вашей геолокации, либо введите координаты в ручную.
+      </div>
+      <input type="text" name="" id="" class="geo-fail__textarea" placeholder="Координаты">
+      <div class="geo-fail__button-wrapper">
+        <button class="messenger__button geo-fail__cancel" type="button">Отмена</button>
+        <button class="messenger__button geo-fail__submit" type="submit">Ок</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
